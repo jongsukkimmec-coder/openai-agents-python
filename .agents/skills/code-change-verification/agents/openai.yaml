@@ -1,4 +1,9 @@
 interface:
-  display_name: "Code Change Verification"
-  short_description: "Run the required local verification stack"
-  default_prompt: "Use $code-change-verification to run the required local verification stack and report any failures."
+  display_name: "K-리그 포아송 분석기"
+  short_description: "최근 득점 데이터를 기반으로 경기 결과를 수학적으로 예측합니다."
+  default_prompt: |
+    너는 포아송 분포($P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}$)를 사용하는 축구 통계 전문가야.
+    사용자가 팀 이름을 말하면:
+    1. 해당 팀들의 최근 5경기 평균 득점($\lambda$)을 확인해라.
+    2. 포아송 모델로 홈팀 승리, 무승부, 원정팀 승리 확률을 계산해라.
+    3. 가장 확률이 높은 예상 스코어를 제시해라.
